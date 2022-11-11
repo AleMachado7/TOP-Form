@@ -1,1 +1,56 @@
- s
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Form</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap'); </style>
+ </head>
+ <body>
+    <section class="left-container">
+        <p></p>
+        <p>Photo by <a href="https://unsplash.com/es/@maximalfocus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maximalfocus</a> on <a href="https://unsplash.com/s/photos/tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>        
+    </section>
+    <section class="right-container">
+        <div class="header-description">
+            <p>This is not a real online service! You know you need something like this in your life
+                to help you realize your deepest dreams.
+            </p>
+            <p>Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="form-container">
+            <form id="signup-form">
+                <div class="text-input">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="John">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Doe">
+                </div>
+                <div class="email-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@megazilla.com">
+                </div>
+                <div class="phone-input">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+5531999999999">
+                </div>
+                <div class="password-input">
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="pwd">                    
+                    <label for="pwd-cnf">Confirm Password</label>
+                    <input type="password" id="pwd-cnf" name="pwd-cnf">
+                </div>
+            </form>
+        </div>
+        <div class="submit-form">
+            <button type="submit" form="signup-form">Create Account</button>
+            <p>Already have an account? <a href="#">Log In</a></p>
+        </div>
+    </section>    
+ </body>
+ </html>
