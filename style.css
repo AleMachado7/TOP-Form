@@ -1,3 +1,8 @@
+:root{
+    --main-font-color: #5de4e4;
+    --dark-bg-color: #191d27; 
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -8,31 +13,39 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    min-width: 30%;
-    min-height: 30%;
 }
 
 .left-container {
+    display: flex;
+    padding: 0;
+    margin: 0;
     background-image: url("./images/background.jpg");
-    background-color: #2e3e5f;  
+    background-color: var(--dark-bg-color);
     background-size: 100vh;
     background-repeat: no-repeat;
-    width: 30%;
+    width: 35%;
     min-height: 100%;
     color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.left-container > p {
+    background-color: var(--dark-bg-color);
 }
 
 .right-container {
     width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     background-color: #191b25;
 }
 
 .right-container > * {
     padding-bottom: 3rem;
     padding-left: 3rem;
+    padding-bottom: 0;
     height: calc(100% / 3);
     display: flex;
     flex-direction: column;
@@ -41,17 +54,67 @@ body {
 
 .header-description {
     font-size: 2rem;
-    color: #7ad3d3;
+    color: var(--main-font-color);
+    padding-right: 15rem;
 }
 
-.header-description > * {
+.header-description > p {
     margin: 0;
 }
 
 .form-container {
-    background-color: #2e3e5f;    
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #23475f;
+    box-shadow: 0px 0px 20px 0px #78ffff;
+
+}
+
+.form-container > p {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--main-font-color);
+}
+
+form {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.form-data > input {
+    width: 200px;
+    height: 36px;
+    margin: 8px 0;
 }
 
 button {
-    width: 10rem;
+    width: 12rem;
+    height: 2.3rem;
+    background-color: #2f9797;
+    border: 0;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px 0px #78ffff;
+}
+
+.submit-form {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: #ebebeb;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-font-color);
+    font-weight: 900;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;;
 }
