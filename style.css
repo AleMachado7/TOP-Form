@@ -1,6 +1,8 @@
 :root{
     --main-font-color: #5de4e4;
     --dark-bg-color: #191d27; 
+    --main-font-size: min(3vh, 3vw);
+    --second-font-size: min(2vh, 2vw);
 }
 
 * {
@@ -24,11 +26,11 @@ body {
     background-size: 100vh;
     background-repeat: no-repeat;
     width: 35%;
-    min-height: 100%;
     color: #ffffff;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    text-align: center;
 }
 
 .left-container > p {
@@ -37,25 +39,20 @@ body {
 
 .right-container {
     width: 70%;
-    display: flex;
-    flex-direction: column;
     background-color: #191b25;
 }
 
-.right-container > * {
-    padding-bottom: 3rem;
-    padding-left: 3rem;
-    padding-bottom: 0;
+.right-container > div {
+    padding: 0 10vw 0 48px;
     height: calc(100% / 3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .header-description {
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: var(--main-font-color);
-    padding-right: 15rem;
+    font-size: var(--main-font-size);
 }
 
 .header-description > p {
@@ -63,29 +60,41 @@ body {
 }
 
 .form-container {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     background-color: #23475f;
     box-shadow: 0px 0px 20px 0px #78ffff;
-
+    justify-content: space-evenly;
 }
 
 .form-container > p {
-    font-size: 1.7rem;
+    font-size: var(--main-font-size);
     font-weight: 800;
     color: var(--main-font-color);
+    margin: 0;
 }
 
 form {
     color: white;
-    font-size: 1.2rem;
+    font-size: var(--second-font-size);
 }
 
+form label {
+    padding-right: 4px ;
+}
 
-.form-data > input {
-    width: 200px;
-    height: 36px;
-    margin: 8px 0;
+.form-row {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+}
+
+.form-data label {
+    display: block;
+}
+
+form label , form input { 
+    font-size: var(--second-font-size);
 }
 
 button {
@@ -103,14 +112,16 @@ button:hover {
     box-shadow: 0px 0px 5px 0px #78ffff;
 }
 
-.submit-form {
-    padding-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+.button-area {
+    padding-top: 30px;
     color: #ebebeb;
     font-size: 18px;
 }
+
+.button-area p {
+    margin-top: 4px;
+}
+
 
 a {
     text-decoration: none;
